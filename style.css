@@ -11,51 +11,42 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #090809;
     background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-nav{
+.container-nav{
     display: flex;
     justify-content: space-between;
-    font: 1rem oswald;
-} 
-.contact-form, #duck, #emergency, header, footer{
-    margin: 5rem 5rem 0;
-    padding: 1rem;
-    /* margin-bottom: 0; */
-}
-.container-nav{
+    flex-wrap: row wrap;
     margin: 0;
-    background-color:#97B838;
+    min-width: 100%;
+    background-color:#97B838;    
 }
-.nav-left{
-    display: flex;
-    align-items: center;
-} 
-
 .nav-left img{
-    width: 70px;
+    /* min-width: 70px; */
     height: 70px;
     cursor: pointer;
 }
-
-.nav-right{
-    width: 80%;
-    width: 60%;
-    padding-right: 1.2rem;
+.nav-right ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+.contact-form, #duck, #emergency, header, footer{
+    padding: 1rem;
+    margin: 1rem;
 }
 
 .nav-right ul li {
     list-style: none;
     padding-top:0.3rem;
+    padding-right: 5rem;
 }
 
 .nav-right li a{
 text-decoration: none;
 color: #050316;
 font-size: 20px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .nav-right a:hover{
     color: black;
@@ -76,17 +67,13 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 } 
 #emergency a{
     text-decoration: none;
-}
-
-ul{
-    display: flex;
-    justify-content: space-between;
+    padding: 1rem;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3px;
+    /* gap: 3px; */
     width: 80%;
     margin: 0 auto;
 }
@@ -96,10 +83,16 @@ ul{
     justify-content: center;
     align-items: center;
     height: 150px;
-    font: 1rem quicksand;
     color: #050316;
     gap: 5rem;
     border: 3px solid #0b80847c;
+    min-width: 100%;
+    
+}
+.grid-item:hover{
+    background-color: #97B838;
+    transition: 0.3s ease-in-out 0s;
+    color: #dacd1b;
 }
 
 footer {
@@ -107,36 +100,34 @@ footer {
     flex-direction: column;
     text-align: center;
 }
-
-h1, h2{
-    font-family: oswald; 
-    animation: unblur 3s 1s 2;
-      
-}
-.bottom-text, p{
-    font: 1rem "Quicksand";
-}
 .contact-form{
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 50%;    
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;    
     gap: 1rem;
     align-self: center;
-
+    flex-wrap: row wrap;
+}
+#contact-form-elements{
+    padding: 0.7rem;
+}
+.contact-form >*{
+    border: none;
+    border-radius: 10px;
 }
 
 .submit-btn{
     margin-left: 15rem;
     margin-right: 15rem;
-    margin-top:1rem;
     padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
 } 
 .submit-btn:hover{
-    background-color: beige;
-}
-
-#contact-form-elements{
-    padding: 0.5rem;
+    background-color: #97B838;
+    color: #dacd1b;
+    border: none;
+    border-radius: 10px;
 }
 
 .github-logo, footer a{
